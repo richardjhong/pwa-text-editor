@@ -131,7 +131,18 @@ For this app, the majority of code for the text editor itself were in place; how
 [Deployed on Heroku](https://rjh-pwa-text-editor.herokuapp.com/)
 
 ## Screenshot
+  * Text Editor
 ![screenshot](./assets/images/screenshot.png)
+
+  * Manifest
+![screenshot](./assets/images/manifest.png)
+
+  * Service Worker
+![screenshot](./assets/images/service_worker.png)
+
+  * IndexDB
+![screenshot](./assets/images/indexdb.png)
+
 
 ## License
 This app was licensed under the MIT License.
