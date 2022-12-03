@@ -5,7 +5,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault();
 
   // Store the triggered events
-  deferredPrompt = event;
+  window.deferredPrompt = event;
 
   // Remove the hidden class from the button.
   butInstall.classList.toggle('hidden', false);
@@ -13,23 +13,11 @@ window.addEventListener('beforeinstallprompt', (event) => {
 
 butInstall.addEventListener('click', async () => {
   console.log('prompt has been activated')
-
-  if (!deferredPrompt) {
-    console.log('return is being hit')
-   return;
-  }
-
-  // Show prompt
-  deferredPrompt.prompt();
- 
-  
-  // Reset the deferred prompt variable, it can only be used once.
-  deferredPrompt = null;
   
   butInstall.classList.toggle('hidden', true);
 });
 
 window.addEventListener('appinstalled', (event) => {
   // Clear prompt
- deferredPrompt = null;
+ window.deferredPrompt = null;
 }); 
